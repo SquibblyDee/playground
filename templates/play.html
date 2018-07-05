@@ -1,0 +1,39 @@
+<!DOCTYPE=html>
+<html>
+    <head> 
+        <title>Playground 1</title>
+        <style>
+        h1{
+            text-align: center;
+            margin-top: 5%;
+        }
+        .boxes{
+            margin: auto;
+            width: 50%;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 0px 10px 10px 0px;
+            {% if blockColor == null %}
+                background-color: #9FC5F8;
+            {% else %}
+                background-color: {{blockColor}};
+            {% endif %}
+            outline: 1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <div class=boxes>
+            <div class=box></div>
+            <div class=box></div>
+            <div class=box></div>
+            {% for i in range(0,number-3): %}
+                <div class=box></div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
